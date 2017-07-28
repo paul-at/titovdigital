@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans:300|Playfair+Display:400,400i" rel="stylesheet">
+
+    <title>M.I.T. Bootcamps Admissions Process Automation</title>
+    <style>
+      #hero {
+        background: url('Hero-Image-4-filter-1-1.jpg') top no-repeat;
+        background-size: cover;
+        height: 26rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
+      h1 {
+        margin-top: 12rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-light">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">Pavel Titov Digital</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:ptitov@gmail.com">Product Development</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:ptitov@gmail.com">Process Automation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pill" href="mailto:ptitov@gmail.com">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="hero">
+    </div>
+
+    <div class="container">
+      <h1 class="bg-white-heading">MIT Bootcamps Admissions Process Automation</h1>
+      <p class="text-uppercase bg-white-heading">Ruby on Rails / Bootstrap 4 / HTML5 / Heroku</p>
+    </div>
+    <div class="container">
+      <h2>Brief</h2>
+      <p><a href="http://bootcamp.mit.edu">M.I.T. Bootcamps</a> team was scaling up and needed to automate
+        processing of student applications.</p>
+
+      <p>Spreadsheets were used to handle admissions process historically and with 1000+ applicants for each
+        new class convolution of the process accumulated exponentially.</p>
+
+      <h2>Solution</h2>
+      <p>A back-office web application implementing pre-existing student admissions workflow
+        has been created and deployed.</p>
+    </div>
+
+    <div class="kpis"><div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <big>3x</big>
+          reduction in administrative staff workload
+        </div>
+        <div class="col-sm-4">
+          <big>2x</big>
+          increase of student applications that have been accepted and paid tuition
+          <span class="text-muted">(per class)</span>
+        </div>
+        <div class="col-sm-4">
+          <big>100x</big>
+          as well
+        </div>
+      </div>
+    </div></div>
+
+    <div class="container">
+      <h2>Dashboard</h2>
+      <p>Main screen displays overview of a class, visualising how many students are on each
+        of the application stage currently.</p>
+
+      <figure class="figure">
+        <img src="dashboard.png" class="figure-img img-fluid" alt="Admissions system dashboard screenshot"
+          style="border: solid 1px #999">
+        <figcaption class="figure-caption">
+          <figcaption class="figure-caption text-right">Admissions system dashboard.</figcaption>
+        </figcaption>
+      </figure>
+
+      <div class="row">
+      <div class="col-md-6">
+        <p>The first column provides summary into the class composition and admissions process status,
+          showing number of applicants and how many have committed to attend.
+          Remaining columns show applications in various stages and overall pipeline:
+          how many reached screening stage, how many went past to interviewing stage and how many
+          admissions decisions were made for the class.</p>
+
+        <p>System users also use Today screen to view pending applications that are ready to be actioned.</p>
+        <figure class="figure">
+          <img src="today.png" class="figure-img img-fluid" alt="Today page screenshot"
+            style="border: solid 1px #999">
+          <figcaption class="figure-caption">
+            <figcaption class="figure-caption text-right">Today screen.</figcaption>
+          </figcaption>
+        </figure>
+
+        <p>Admissions system ensures that state transition follow predefined process,
+          using <a href="states.svg">state diagram</a>
+          that has beed defined with the admissions team
+          during analysis.</p>
+      </div><div class="col-md-6">
+        <figure class="figure">
+          <img src="states.svg" class="figure-img img-fluid" alt="State diagram"
+            style="border: solid 1px #999">
+          <figcaption class="figure-caption">
+            <figcaption class="figure-caption text-right"><a href="states.svg">State diagram</a>
+              graph
+              autogenerated from the code.</figcaption>
+          </figcaption>
+        </figure>
+      </div>
+      </div>
+
+      <h2>Application Form</h2>
+      <h2>Consensus Student Review</h2>
+      <h2>Find Previous Applications</h2>
+      <h2>Interview Scheduling and Note-Taking</h2>
+      <h2>Scholarship and Payments</h2>
+      <h2>Access Controls</h2>
+      <h2>Interoperability</h2>
+    </div>
+
+    <div id="footer" class="bg-dark"><div class="container">
+      <h4>Contact</h4>
+      <a href="mailto:ptitov@gmail.com">E-Mail</a><br>
+      <a href="https://www.linkedin.com/in/titov/">LinkedIn</a>
+    </div></div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+body {
+  font: 300 12pt "Open Sans", sans-serif;
+
+}
+
+.navbar {
+  border-bottom: 1px solid #e6e6e6;
+  height: 6rem;
+  font-size: 125%;
+  background: white;
+}
+
+.navbar-brand {
+  font-family: "Libre Baskerville", serif;
+  font-size: 175%;
+  color: #222222;
+}
+
+.nav-link.pill {
+  border: 2pt solid #41e2ad;
+  border-radius: 20pt;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+h1, h2 {
+  margin-top: 1em;
+}
+
+.bg-white-heading {
+  background: white;
+  display: inline-block;
+  padding:0.2em
+}
+
+p {
+  color: #262626;
+  line-height: 175%;
+}
+
+.lead {
+  font: 400 40px "Playfair Display", serif;
+  color: #222222;
+  line-height: 150%;
+  margin-top: 5rem;
+}
+
+.portfolio-item {
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+
+.portfolio-item h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.portfolio a:hover {
+  text-decoration: none;
+}
+
+
+/* Portfolio pages */
+
+.kpis {
+  background: #eee;
+  padding: 2rem;
+  text-align: center;
+}
+
+.kpis big {
+  display: block;
+  font-size: 300%;
+}
+
+.figure-caption {
+  border-top: 1pt solid #999;
+  padding-top: 1pt;
+}
+
+#footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+
+#footer h4 {
+  font-family: "Libre Baskerville", serif;
+}
+
+#footer a {
+  color:white;
+}
+
+.bg-dark {
+  background-color: rgba(35, 35, 35, 1);
+}
+
+.bg-red {
+  background-color: rgba(253, 65, 1, 1);
+}
+
+.bg-teal {
+  background-color: rgba(103, 216, 229, 1);
+}
+
+.bg-yellow {
+  background-color: rgba(255, 196, 58, 1);
+}
