@@ -58,11 +58,16 @@
     </div>
     <div class="container">
       <h2>Brief</h2>
-      <p><a href="http://bootcamp.mit.edu">M.I.T. Bootcamps</a> team was scaling up and needed to automate
+      <p><a href="http://bootcamp.mit.edu">MIT Bootcamps</a> team was scaling up and needed to automate
         processing of student applications.</p>
 
       <p>Spreadsheets were used to handle admissions process historically and with 1000+ applicants for each
-        new class convolution of the process accumulated exponentially.</p>
+        new class convolution of the process accumulated exponentially, resulting in
+        occasional loss of application data.</p>
+
+      <p>Existing off-the-shelf options were considered
+        did not support voting on decisions,
+        which was part of existing process.</p>
 
       <h2>Solution</h2>
       <p>A back-office web application implementing pre-existing student admissions workflow
@@ -81,8 +86,8 @@
           <span class="text-muted">(per class)</span>
         </div>
         <div class="col-sm-4">
-          <big>100x</big>
-          as well
+          <big>100%</big>
+          data consistency
         </div>
       </div>
     </div></div>
@@ -135,12 +140,118 @@
       </div>
 
       <h2>Application Form</h2>
+
+      <p>Application forms filled on the website are sent to the admission system
+        right away using its REST API. The form is editable and permits seeing
+        everything that has been happening with the application in one place:
+        personal data, current status, voting results, interview notes, payments.</p>
+
+      <figure class="figure">
+        <img src="appform.png" class="figure-img img-fluid" alt="Application Form screenshot">
+        <figcaption class="figure-caption">
+          <figcaption class="figure-caption text-right">Application Form screen.</figcaption>
+        </figcaption>
+      </figure>
+
       <h2>Consensus Student Review</h2>
+
+      <p>Two different voting mechanisms were built to support decision-making
+        at various stages.</p>
+
+      <p>Initially, applications are being reviewed by a few members of the team,
+        who vote on whether it should proceed forward based on the application content.
+        The vote is a simple yes/no and the application is allowed to proceed to
+        a next stage &mdash; interviewing or rejection &mdash; only when a consensus
+        is reached, having at least half of the admissions committee for the class
+        in agreement.</p>
+
+      <p>After interview, each applicant scored using one to five scale
+        on a number of criteria,
+        defined for each class. The scoring can be done by any member of
+        the admissions committee and assigned interviewer, and resulting
+        average score can later be used to admit or reject applicant,
+        as well as part of decision-making for scholarship.</p>
+
       <h2>Find Previous Applications</h2>
+
+      <p>The system automatically looks up previous applications
+        by name, email or phone number and cross-references application forms.</p>
+
+      <p>By storing all the applications in a database, admissions team were able
+        to track who had applied before in the past.
+        When track was kept using spreadsheets,
+        the team had to rely on memory of the most senior member.</p>
+
       <h2>Interview Scheduling and Note-Taking</h2>
+
+      <p>Interviews are assigned to an interviewer, and a rich-text editor
+        is available for interviewers to take their notes. The notes stored
+        for each interviewer individually and made available to the rest of the team.</p>
+
+      <figure class="figure">
+        <img src="applicants.png" class="figure-img img-fluid" alt="Applicants List screenshot">
+        <figcaption class="figure-caption">
+          <figcaption class="figure-caption text-right">List of applicants that reched interviewing stage.</figcaption>
+        </figcaption>
+      </figure>
+
       <h2>Scholarship and Payments</h2>
+
+      <p>Users can set up multiple payment tiers for each class.
+        Each payment tier consists of deposit and tuition fee.
+        Applications can be assigned to different payment tiers manually to allow for
+        discounts or different 'packages'.</p>
+
+      <p>Each payment made by applicant is entered into the system.</p>
+
+      <p>Based on the value paid admitted applicants are automatically
+        progressed to <em>Deposit Paid</em> and <em>Tuition Paid</em> states,
+        allowing for quick reporting on pending payments.</p>
+
+      <p>Scholarship candidates are counted separately, with application able
+        to progress through <em>Scholarship Shortlisted</em> state into
+        <em>Scholarship Granted</em>, meaning the applicant has tuition fee waived,
+        or <em>Scholarship Rejected</em>, allowing the applicant to pay
+        normal tuition price or decide not to come.</p>
+
+      <figure class="figure" style="float:right;margin-left:1rem">
+        <img src="email.png" class="figure-img figure-border"
+          alt="New E-Mail screenshot" width="495" height="453">
+        <figcaption class="figure-caption">
+          <figcaption class="figure-caption text-right">New e-mail dialog
+            for applicants who have been interviewed for a class.</figcaption>
+        </figcaption>
+      </figure>
+
+      <h2>E-Mail Automation</h2>
+
+      <p>
+      Admissions System has an option to create an instant mailing list
+      by class and application state. The e-mail can be controlled in granular
+      fashion by selection applicants from the list who will receive the message
+      and enter arbitrary e-mails for sending copies.
+      </p>
+
+      <p>Automatic e-mail rules can be set up to send a template once
+        application reaches a certain state &mdash; such as being selected
+        for interviewing or rejected.</p>
+
+      <p>A wide selection of merge tags is available and all sent e-mails
+        are archived in relevant application form history.</p>
+  
       <h2>Access Controls</h2>
+
+      <p>Application offers granular access control, allowing to configure
+        <em>Administrators</em> who are allowed full access and
+        <em>Staff Members</em> who are permitted to access only those classes
+        in which they are members of the admissions committee.</p>
+
       <h2>Interoperability</h2>
+
+      <p>The application has CSV import and export options that were used
+        to import past application data from legacy spreadsheet (to show them
+        in past applications), connect the system to marketing automation tools
+        such as HubSpot or MailChip, and export data for future analysis.</p>
     </div>
 
     <div id="footer" class="bg-dark"><div class="container">

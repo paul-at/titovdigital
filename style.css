@@ -88,6 +88,10 @@ p {
   padding-top: 1pt;
 }
 
+.figure-border {
+  border: solid 1px #999;
+}
+
 #footer {
   margin-top: 3rem;
   padding-top: 1rem;
