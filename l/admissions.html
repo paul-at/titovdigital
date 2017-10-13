@@ -26,6 +26,30 @@
         margin-top: 12rem;
       }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google AdWords: 879-657-5294 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068719521"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-1068719521');
+    </script>
+    <script>
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-1068719521/tVuHCPrvpnYQobvN_QM',
+              'event_callback': callback
+          });
+          return false;
+        }
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-toggleable-md navbar-light">
@@ -86,7 +110,7 @@
       <!-- End of HubSpot Embed Code -->
 
       <h2>Read Full Case Study</h2>
-      <form method="GET" action="/admissions/?fromlanding" id="admissions_landing">
+      <form method="GET" action="/admissions/" id="admissions_landing">
         <div class="form-group">
           <label>Name</label>
           <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
@@ -96,7 +120,7 @@
           <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" onClick="gtag_report_conversion();">Submit</button>
       </form>
     </div>
   </body>
