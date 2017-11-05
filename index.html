@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans:300|Playfair+Display:400,400i" rel="stylesheet">
 
@@ -33,7 +33,7 @@
       
   </head>
   <body>
-    <nav class="navbar navbar-toggleable-md navbar-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,20 +48,21 @@
       </div>
     </nav>
     <div class="container">
-      <p class="lead">Full-stack solutions for
-        <em>high-growth
+      <p class="lead">Full-stack solutions
+        <em>for
+        high-growth
         companies and start-ups</em>.
       </p>
-      <p style="margin-bottom:7rem;color:#606060"><big>
+      <p style="margin-bottom:7rem;color:#333"><big>
         Achieve business outcomes building
         web products that generate value, be it lean MVP development or
         increasing efficiency of existing business by automating costly processes.</big></p>
 
-      <h2>Services</h2>
       <div class="row">
-        <div class="col-md-4">
-          <p><img src="i/meetings.jpg" class="img-fluid"></p>
+        <div class="col-md-4 animated fadeIn">
           <h3>Interim CTO and Technical Consultancy</h3>
+          <p><img src="i/meetings.jpg" class="img-fluid"></p>
+
           <ul>
             <li>Building development teams;</li>
             <li>
@@ -75,15 +76,10 @@
               Product and roadmap planning.
             </li>
           </ul>
-          <h4>Sample Interim CTO and Technical Consultancy Projects</h4>
-          <div class="portfolio-item bg-dark" style="background-image: url('i/bg-sports.jpg'); background-size: cover">
-              <h4>Building 30+ Development Team</h4>
-              Leading software development in a leading UK-based sports betting solutions vendor.
-            </div>
         </div>
-        <div class="col-md-4">
-          <p><img src="i/data.jpg" class="img-fluid"></p>
+        <div class="col-md-4 animated fadeIn">
           <h3>Data Integration and Process Automation</h3>
+          <p><img src="i/data.jpg" class="img-fluid"></p>
           <ul>
             <li>
               Integrating unconnected data sources and systems to establish free flow
@@ -93,54 +89,88 @@
               Real-time data integrations, including betting and finance markets;
             </li>
             <li>
+              Single sing-on and payment integrations;
+            </li>
+            <li>
               Corellating different datasets to uncover new insights.
             </li>
           </ul>
-
-          <h4>Sample Data Integration and Process Automation Projects</h4>
-          <a href="https://pikhaya.com" target="_blank"><div class="portfolio-item bg-red">
-            <h4>Zoopla-Pikhaya Data Integration</h4>
-            Matching 250,000 properties from leading UK real estate website with
-              analytics platform.<span class="btn btn-sm btn-secondary">See the Product</button>
-          </div></a>
-          <a href="admissions/">
-            <div class="portfolio-item bg-dark">
-              <h4>M.I.T. Bootcamps Admissions Process Automation</h4>
-              Processing thousands of applicants to organise Bootcamp classes.
-              <span class="btn btn-sm btn-secondary">Read Case Study</button>
-            </div>
-          </a>
-          <!--div class="portfolio-item bg-teal">
-            <h4>Real-Time Price Feed Integration</h4>
-            Architecting a data feed integration with near-realtime delay between
-            the feed and web clients.
-          </div-->
         </div>
-        <div class="col-md-4">
-          <p><img src="i/tech.jpg" class="img-fluid"></p>
+        <div class="col-md-4 animated fadeIn">
           <h3>Full-Stack Product Architecture</h3>
+          <p><img src="i/tech.jpg" class="img-fluid"></p>
           <ul>
               <li>Defining requirements for mobile-first web applications.</li>
               <li>Technical stack choice.</li>
               <li>Estimating and breaking-down roadmap to spec MVP.</li>
               <li>Defining optimal separation between front-end and back-end.</li>
           </ul>
+        </div>
+      </div>
 
-          <h4>Sample Full-Stack Product Architecture Projects</h4>
-          <a href="https://dupzapper.com" target="_blank"><div class="portfolio-item bg-dark"  style="background-image: url('i/bg-fraud.jpg')">
+      <h2 class="animated zoomInRight">Selected Projects</h2>
+      <div class="row animated fadeIn">
+        <div class="col-md-6">
+            <div class="portfolio-item bg-dark" style="background-image: url('i/bg-sports.jpg'); background-size: cover">
+              <h4>Building 30+ Development Team</h4>
+              Leading software development in a leading UK-based sports betting solutions vendor.
+            </div>
+            <a href="https://pikhaya.com" target="_blank"><div class="portfolio-item bg-red">
+                <h4>Zoopla-Pikhaya Data Integration</h4>
+                Matching 250,000 properties from leading UK real estate website with
+                  analytics platform.<br>
+                  <span class="btn btn-sm btn-secondary">See the Product</button>
+              </div></a>
+
+              <div class="portfolio-item bg-dark" style="background-image: url('i/bg-chart.jpg')">
+                <h4>Graphing Tools For Cryptocurrency Exchange</h4>
+                Creating custom charting tool for a UK-based digital asset trading platform.
+              </div>
+        </div>
+        <div class="col-md-6">
+            <a href="https://dupzapper.com" target="_blank"><div class="portfolio-item bg-dark"  style="background-image: url('i/bg-fraud.jpg')">
               <h4>DupZapper Fraud Detection</h4>
               Device identification and fraud case handling tool for online gaming market.
               <span class="btn btn-sm btn-secondary">See the Product</button>
           </div></a>
-          <div class="portfolio-item bg-dark" style="background-image: url('i/bg-chart.jpg')">
-            <h4>Graphing Tools For Cryptocurrency Exchange</h4>
-            Creating custom charting tool for a UK-based digital asset trading platform.
+
+            <a href="admissions/">
+              <div class="portfolio-item bg-dark">
+                <h4>M.I.T. Bootcamps Admissions Process Automation</h4>
+                Processing thousands of applicants to organise Bootcamp classes.
+                <span class="btn btn-sm btn-secondary">Read Case Study</button>
+              </div>
+            </a>
+        </div>
+      </div>
+
+        <h2>Testimonials</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <p>It's been a pleasure working with Pavel. He has been patient throughout, firm where needed, and
+              has managed to navigate the terribly-designed software system I threw at him and produce exactly
+              what was asked. I recommend him completely.</p>
+  
+            <p class="text-right"><em>Gavin Chait<br><a href="https://pikhaya.com">Pikhaya</a></em></p>
+          </div>
+          <div class="col-md-4">
+            <p>Really enjoyed working with Pavel on the bootcamp admissions system.
+              Hopefully, there will be more opportunities to work together down the road.</p>
+  
+            <p class="text-right"><em>Chi-Chu Tschang<br><a href="http://bootcamp.mit.edu">MIT Bootcamps</a></em></p>
+          </div>
+          <div class="col-md-4">
+            <p>Pavel is an extremely skilled system administrator and engineer.
+              Probably the best CTO of a web hosting company I know in whole Russian Internet market at the moment.</p>
+            
+            <p>I've used services provided by Pavel's company for more than 6 years straight.</p>
+  
+            <p class="text-right"><em>Yaroslav Markin<br><a href="http://evilmartians.com">Evil Martians</a></em></p>
           </div>
         </div>
       </div>
-    </div>
 
-    <div style="background:#eee;padding-top:1rem;padding-bottom:1rem"><div class="container">
+    <div style="background:#eee;padding-top:1rem;padding-bottom:1rem;"><div class="container">
       <h2>Pavel Titov</h2>
       <div class="row">
         <div class="col-md-4">

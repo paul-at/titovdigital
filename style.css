@@ -5,7 +5,7 @@
 }
 
 body {
-  font: 300 14pt "Open Sans", sans-serif;
+  font: 300 14pt Arial, Helvetica, sans-serif;
 
 }
 
@@ -33,6 +33,12 @@ h1 {
 
 h1, h2, h4 {
   margin-top: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  color: #004;
+  font-family: "Open Sans", sans-serif;
 }
 
 .bg-white-heading {
@@ -42,7 +48,7 @@ h1, h2, h4 {
 }
 
 p {
-  color: #262626;
+  color: #111; /* #262626; */
   line-height: 175%;
 }
 
@@ -50,13 +56,19 @@ strong {
   font-weight: bold;
 }
 
+.container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .container li {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  font-size: 95%;
 }
 
 .lead {
   font: 400 40px "Playfair Display", serif;
-  color: #222222;
+  color: #111;
   line-height: 150%;
   margin-top: 5rem;
 }
@@ -66,6 +78,7 @@ strong {
   padding: 3rem;
   text-align: center;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .portfolio-item h4 {
