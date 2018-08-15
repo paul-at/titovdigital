@@ -160,5 +160,5 @@ strong {
   position: -ms-sticky;
   position: -o-sticky;
   position: sticky;
-  bottom: 60px;
+  bottom: 5vh;
 }
