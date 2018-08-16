@@ -38,12 +38,12 @@ h3 {
 }
 
 .bg-grass {
-  background: url('i/bg-large/1427691669_6dd5c371aa_o.jpg');
+  background: url('i/bg-large/17389695592_8d3c19d02f_o.jpg');
   /*background: url('i/bg-large/5323488503_64f96ca674_o.jpg');*/
   background-size: cover;
 }
 .bg-grass > div {
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.8);
 }
 .bg-grass p {
   color: #333;
