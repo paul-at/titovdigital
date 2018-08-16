@@ -1,6 +1,6 @@
 $(function() {
   $.ajax({
-    url: "includes/footer.html",
+    url: "/includes/footer.html",
   })
     .done(function( data ) {
       $('body').append(data);
