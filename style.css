@@ -49,6 +49,15 @@ h3 {
   color: #333;
 }
 
+.bg-money {
+  background: url('i/bg-large/61056391_31343afdc6_o.jpg');
+  background-size: cover;
+  color: #333;
+}
+.bg-money > div {
+  background: rgba(255,255,255,0.7);
+}
+
 .bg-white-heading {
   background: white;
   display: inline-block;
