@@ -30,9 +30,11 @@
       
               b24form({"id":"3","lang":"en","sec":"t8815a","type":"inline"});
 
-              window.onload = function() {
+              var resizeCrmForm = function() {
                 document.getElementsByTagName("iframe")[0].style.height="600px";
               }
+              window.onload = resizeCrmForm;
+              setTimeout(resizeCrmForm, 5000);
         </script>
       </div>
     </div>
