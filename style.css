@@ -58,6 +58,33 @@ h3 {
   background: rgba(255,255,255,0.7);
 }
 
+/* Headings with background */
+.h-bg {
+  min-height: 15rem;
+  vertical-align: bottom;
+  position: relative;
+}
+.bg-apple {
+  background: url('i/bg-apple.jpg');
+  background-size: cover;
+}
+.bg-handshake {
+  background: url('i/bg-handshake.jpg');
+  background-size: cover;
+}
+.bg-servers {
+  background: url('i/bg-servers.jpg');
+  background-size: cover;
+}
+.h-bg span {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  padding: 0.3rem;
+}
+
 .bg-white-heading {
   background: white;
   display: inline-block;
