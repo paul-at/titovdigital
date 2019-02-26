@@ -95,6 +95,7 @@ function sendDataToServer(survey) {
   })
 }
 
+console.log(document.readyState)
 window.addEventListener("footerLoaded", function(event) {
   Survey.StylesManager.applyTheme("bootstrap");
   var survey = new Survey.Model(surveyJSON, "surveyContainer");
