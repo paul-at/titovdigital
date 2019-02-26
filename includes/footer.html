@@ -89,7 +89,7 @@ function sendDataToServer(survey) {
   })
 }
 
-script.addEventListener("load", function(event) {
+window.addEventListener("load", function(event) {
   Survey.StylesManager.applyTheme("bootstrap");
   var survey = new Survey.Model(surveyJSON, "surveyContainer");
   survey.onComplete.add(sendDataToServer);
