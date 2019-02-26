@@ -60,8 +60,8 @@
 </div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" async="false"></script>
-<script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js" async="false"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+<script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js"></script>
 <script>
 var surveyJSON = {"pages":[{"name":"page2","elements":[{"name":"Name","type":"text","title":"Name"},{"name":"Phone","type":"text","title":"Phone","inputType":"tel"},{"name":"Email","type":"text","title":"E-Mail","inputType":"email","isRequired":true,"validators":[{"type":"email"}]},{"name":"Details","type":"comment","title":"Enquiry Details"}]}]}
 var surveyErrorText = 'Unable to submit the form at the moment. Please contact via contact@titovdigital.com'
@@ -95,9 +95,29 @@ function sendDataToServer(survey) {
   })
 }
 
-Survey.StylesManager.applyTheme("bootstrap");
-var survey = new Survey.Model(surveyJSON, "surveyContainer");
-survey.onComplete.add(sendDataToServer);
+// https://stackoverflow.com/questions/27569505/wait-until-script-tag-has-finished-loading-to-execute-another-script-tag-in
+// Check if a name is defined
+var isModuleDefined = function(moduleName) {
+  var fields = moduleName.split('.'), cur = window;
+  for(var i=0; i<fields.length; i++){
+    if(typeof cur[fields[i]] === "undefined") return false;
+    cur = cur[fields[i]];
+  }
+  return true;
+};
+
+var runWhenReady = function(){
+  // Wait for the availability of the function
+  if (!isModuleDefined("Survey")){
+      setTimeout(runWhenReady, 50);
+      return;
+  }
+  console.log('Trying to call function...');
+  Survey.StylesManager.applyTheme("bootstrap");
+  var survey = new Survey.Model(surveyJSON, "surveyContainer");
+  survey.onComplete.add(sendDataToServer);
+};
+runWhenReady();
 </script>
 
 
