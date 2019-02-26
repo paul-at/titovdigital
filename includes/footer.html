@@ -60,8 +60,8 @@
 </div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-<script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" async="false"></script>
+<script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js" async="false"></script>
 <script>
 var surveyJSON = {"pages":[{"name":"page2","elements":[{"name":"Name","type":"text","title":"Name"},{"name":"Phone","type":"text","title":"Phone","inputType":"tel"},{"name":"Email","type":"text","title":"E-Mail","inputType":"email","isRequired":true,"validators":[{"type":"email"}]},{"name":"Details","type":"comment","title":"Enquiry Details"}]}]}
 var surveyErrorText = 'Unable to submit the form at the moment. Please contact via contact@titovdigital.com'
@@ -95,12 +95,9 @@ function sendDataToServer(survey) {
   })
 }
 
-console.log(document.readyState)
-window.addEventListener("footerLoaded", function(event) {
-  Survey.StylesManager.applyTheme("bootstrap");
-  var survey = new Survey.Model(surveyJSON, "surveyContainer");
-  survey.onComplete.add(sendDataToServer);
-})
+Survey.StylesManager.applyTheme("bootstrap");
+var survey = new Survey.Model(surveyJSON, "surveyContainer");
+survey.onComplete.add(sendDataToServer);
 </script>
 
 
