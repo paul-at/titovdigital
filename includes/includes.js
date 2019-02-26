@@ -6,6 +6,15 @@ $(function() {
   })
     .done(function( data ) {
       $('body').append(data);
-      window.dispatchEvent(footerLoadedEvent)
+      if (document.readyState == 'complete') {
+        // document already ready if all resources referenced in included file
+        // are available in cache
+        window.dispatchEvent(footerLoadedEvent)
+      } else {
+        // wait for resources to load
+        window.addEventListener("load", function(event) {
+          window.dispatchEvent(footerLoadedEvent)
+        })
+      }
     });
 });
