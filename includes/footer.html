@@ -47,23 +47,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" style="height:800px">
-          <script id="bx24_form_inline" data-skip-moving="true">
-              (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-                      (w[b].forms=w[b].forms||[]).push(arguments[0])};
-                      if(w[b]['forms']) return;
-                      var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
-                      var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-              })(window,document,'https://titovdigital.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-      
-              b24form({"id":"3","lang":"en","sec":"t8815a","type":"inline"});
-
-              var resizeCrmForm = function() {
-                document.getElementsByTagName("iframe")[0].style.height="600px";
-              }
-              window.onload = resizeCrmForm;
-              setTimeout(resizeCrmForm, 5000);
-        </script>
+      <div class="modal-body" style="height:800px" id="surveyContainer">
       </div>
     </div>
   </div>
@@ -74,6 +58,41 @@
   style="float:right;margin-right:30px;font-size:200%;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 8px 40px 0 rgba(0, 0, 0, 0.19);"
   class="btn btn-warning">Contact Us</button>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+<script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js"></script>
+<script>
+var surveyJSON = {"pages":[{"name":"page2","elements":[{"name":"Name","type":"text","title":"Name"},{"name":"Phone","type":"text","title":"Phone","inputType":"tel"},{"name":"Email","type":"text","title":"E-Mail","inputType":"email","isRequired":true,"validators":[{"type":"email"}]},{"name":"Details","type":"comment","title":"Enquiry Details"}]}]}
+var surveyErrorText = 'Unable to submit the form at the moment. Please contact via contact@titovdigital.com'
+
+function sendDataToServer(survey) {
+  fetch("https://forms-gem-test.herokuapp.com/tables/3/records", {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({
+      record: { data: survey.data },
+      form_uuid: "00eaf2c5-37d9-4ee5-8305-0f43c7912d06"
+    })
+  }).then(function(res) {
+    if (res.ok) {
+      document.getElementById('surveyContainer').innerText='Thank you! We will get in touch with you as soon as possible.'
+    } else {
+      console.log(res)
+      document.getElementById('surveyContainer').innerText=surveyErrorText
+    }
+  }).catch(function(res) {
+    console.log(res)
+    document.getElementById('surveyContainer').innerText=surveyErrorText
+  })
+}
+
+Survey.StylesManager.applyTheme("bootstrap");
+var survey = new Survey.Model(surveyJSON, "surveyContainer");
+survey.onComplete.add(sendDataToServer);
+</script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
