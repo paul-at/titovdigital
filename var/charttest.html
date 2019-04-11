@@ -1,0 +1,32 @@
+<button onclick="chartWidgetFor('AAPL')">AAPL</button>
+<button onclick="chartWidgetFor('MSFT')">MSFT</button>
+<button onclick="chartWidgetFor('AMZN')">AMZN</button>
+<button onclick="chartWidgetFor('GOOG')">GOOG</button>
+<button onclick="chartWidgetFor('FB')">FB</button>
+<button onclick="chartWidgetFor('BABA')">BABA</button>
+<button onclick="chartWidgetFor('XOM')">XOM</button>
+<button onclick="chartWidgetFor('JPM')">JPM</button>
+
+<h4>Price</h4>
+<canvas id="widgetPriceChart"></canvas>
+
+<h4>Payment Schedule</h4>
+<canvas id="widgetDividendChart"></canvas>
+<p>Consecutive Years of Dividend Increases: <span id="widgetDividendIncreaseCount"></span></p>
+
+<h4>Dividend Yield</h4>
+<canvas id="widgetYieldChart"></canvas>
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://stock-charting-backend.herokuapp.com/widgetChart.js"></script> <!-- CHANGE TO FULL URL WHEN USING IN PRODUCTION -->
+
+<!-- Widget Configuration and Bootstrap -->
+<script>
+  var widgetChartBorderColor = '#3F8471'
+
+  document.addEventListener('DOMContentLoaded', function(){
+    chartWidgetFor('AAPL')
+  })
+</script>
