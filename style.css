@@ -100,11 +100,6 @@ strong {
   font-weight: bold;
 }
 
-.container ul {
-  list-style: none;
-  padding-left: 0;
-}
-
 .container li {
   margin-bottom: 1em;
   font-size: 95%;
@@ -197,4 +192,15 @@ strong {
   position: -o-sticky;
   position: sticky;
   bottom: 5vh;
+}
+
+/* Articles Formatting */
+.longread {
+  font-family: sans-serif
+}
+.longread h2 {
+  font-weight: 800
+}
+.longread h2, .longread h3 {
+  margin-top: 3rem
 }
