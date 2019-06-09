@@ -130,6 +130,50 @@
               <li>Keep product vision in-house to reduce delivery risks.</li>
             </ol>
 
+            <h2>Creating a Web Application?</h2>
+            <h4>Contact us for an estimate or expert advice</h4>
+            <div id="leadFormContainer"></div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+            <script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js"></script>
+            <script>
+            var formJSON = {"pages":[{"name":"page2","elements":[{"name":"Name","type":"text","title":"Name"},{"name":"Phone","type":"text","title":"Phone","inputType":"tel"},{"name":"Email","type":"text","title":"E-Mail","inputType":"email","isRequired":true,"validators":[{"type":"email"}]},{"name":"Details","type":"comment","title":"Enquiry Details"}]}]}
+            var formErrorText = 'Unable to submit the form at the moment. Please contact via contact@titovdigital.com'
+            
+            function sendFormToServer(survey) {
+              document.getElementById('leadFormContainer').innerHTML='<h3>Sending...</h3>' +
+              '  <div class="progress">' +
+              '    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>' +
+              '  </div>'
+            
+              fbq('track', 'Lead');
+              fetch("https://forms-gem-test.herokuapp.com/tables/3/records", {
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body: JSON.stringify({
+                  record: { data: survey.data },
+                  form_uuid: "00eaf2c5-37d9-4ee5-8305-0f43c7912d06"
+                })
+              }).then(function(res) {
+                if (res.ok) {
+                  document.getElementById('leadFormContainer').innerText='Thank you! We will get in touch with you as soon as possible.'
+                } else {
+                  console.log(res)
+                  document.getElementById('leadFormContainer').innerText=formErrorText
+                }
+              }).catch(function(res) {
+                console.log(res)
+                document.getElementById('leadFormContainer').innerText=formErrorText
+              })
+            }
+            
+            Survey.StylesManager.applyTheme("bootstrap");
+            var leadForm = new Survey.Model(formJSON, "leadFormContainer");
+            leadForm.onComplete.add(sendFormToServer);
+            </script>
+
           </div>
         </div>
         <div class="d-none d-lg-block col-lg-2"></div>
