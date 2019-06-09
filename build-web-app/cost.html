@@ -132,12 +132,12 @@
 
             <h2>Creating a Web Application?</h2>
             <h4>Contact us for an estimate or expert advice</h4>
-            <div id="leadFormContainer"></div>
+            <div id="leadFormContainer" style="margin-bottom: 3rem"></div>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
             <script src="https://surveyjs.azureedge.net/1.0.71/survey.ko.min.js"></script>
             <script>
-            var formJSON = {"pages":[{"name":"page2","elements":[{"name":"Name","type":"text","title":"Name"},{"name":"Phone","type":"text","title":"Phone","inputType":"tel"},{"name":"Email","type":"text","title":"E-Mail","inputType":"email","isRequired":true,"validators":[{"type":"email"}]},{"name":"Details","type":"comment","title":"Enquiry Details"}]}]}
+            var formJSON = {"pages":[{"name":"page2","elements":[{"name":"Name","type":"text","title":"Name"},{"name":"Phone","type":"text","title":"Phone","inputType":"tel"},{"name":"Email","type":"text","title":"E-Mail","inputType":"email","isRequired":true,"validators":[{"type":"email"}]},{"name":"Details","type":"comment","title":"Tell Us About Your Application"}]}]}
             var formErrorText = 'Unable to submit the form at the moment. Please contact via contact@titovdigital.com'
             
             function sendFormToServer(survey) {
