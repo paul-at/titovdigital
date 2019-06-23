@@ -147,6 +147,7 @@
               '  </div>'
             
               fbq('track', 'Lead');
+              gtag('event', 'generate_lead', {});
               fetch("https://forms-gem-test.herokuapp.com/tables/3/records", {
                 headers: {
                   'Content-Type': 'application/json'
